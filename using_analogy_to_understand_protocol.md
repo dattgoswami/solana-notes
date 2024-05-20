@@ -36,3 +36,21 @@ Cloudbreak is like a highly organized library system that allows many people to 
 1.8 **Archivers**
 
 Archivers distribute the storage of blockchain data across numerous nodes, similar to spreading out copies of documents across several secure locations. This ensures the system remains decentralized and secure, without requiring everyone to have high-end storage equipment.
+
+## End-to-End Transaction Process
+
+Initiation: A client(Phantom wallet) signs a transaction referencing a recent block-hash that is fully confirmed.
+
+Forwarding: The transaction is forwarded to a validator, which in turn forwards it to upcoming leaders.
+
+Data Fetching: The  Transaction Processing Unit (TPU) fetches the transaction data at the kernel level.
+
+Signature Verification: The GPU (Graphics Processing Unit) verifies the transaction's signature.
+
+Banking: The CPU processes the transaction and updates the account state.
+
+Writing: The kernel writes the processed transaction and updated state to disk.
+
+Propagation: The transaction data is propagated across the network using the Turbine protocol.
+
+Validation: Validators validate the entries using the Transaction Validation Unit (TVU).
