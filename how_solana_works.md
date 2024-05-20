@@ -92,9 +92,13 @@ Solana’s network can generate up to 4 petabytes of data annually. Storing all 
 
 References:
 https://medium.com/solana-labs/proof-of-history-a-clock-for-blockchain-cf47a61a9274
+
 https://medium.com/solana-labs/tower-bft-solanas-high-performance-implementation-of-pbft-464725911e79
+
 https://medium.com/solana-labs/gulf-stream-solanas-mempool-less-transaction-forwarding-protocol-d342e72186ad
+
 https://medium.com/solana-labs/turbine-solanas-block-propagation-protocol-solves-the-scalability-trilemma-2ddba46a51db
 
 https://medium.com/solana-labs/cloudbreak-solanas-horizontally-scaled-state-architecture-9a86679dcbb1
+
 https://medium.com/solana-labs/replicators-solanas-solution-to-petabytes-of-blockchain-data-storage-ef79db053fa1
