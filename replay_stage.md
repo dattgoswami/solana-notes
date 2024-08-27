@@ -50,7 +50,7 @@ During initialization, the ReplayStage sets up necessary channels and data struc
 
 ### 3.2  [Main Replay Loop](https://github.com/anza-xyz/agave/blob/a10cd5548d2e21d10b3e43a52af2684333425f26/core/src/replay_stage.rs#L551)
 
-The heart of the ReplayStage is its main [replay loop]((https://github.com/anza-xyz/agave/blob/a10cd5548d2e21d10b3e43a52af2684333425f26/core/src/replay_stage.rs#L654), which continuously performs the following tasks:
+The heart of the ReplayStage is its main [replay loop](https://github.com/anza-xyz/agave/blob/a10cd5548d2e21d10b3e43a52af2684333425f26/core/src/replay_stage.rs#L654), which continuously performs the following tasks:
 
 1. **Collecting Frozen Banks**: Gathers all banks (representations of blockchain state at different slots) that have been frozen.
 
