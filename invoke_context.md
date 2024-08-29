@@ -1,18 +1,14 @@
 # The Solana Program Runtime: A Deep Dive into InvokeContext
 
-## 1. Introduction
-
-The Solana blockchain is renowned for its high performance and scalability. At the heart of this efficiency lies the Solana Program Runtime, a sophisticated system designed to execute on-chain programs swiftly and securely. This article will explore the core of this runtime, with a particular focus on the InvokeContext - the central structure that manages program execution.
-
-## 2. Overview of the Solana Program Runtime
+## 1. Overview of the Solana Program Runtime
 
 The Solana Program Runtime is responsible for the entire lifecycle of on-chain programs, from loading and execution to resource management and prioritization. It comprises several interconnected components that work in concert to ensure smooth and secure program execution.
 
-## 3. The InvokeContext: The Linchpin of Program Execution
+## 2. The [Invoke Context](https://github.com/anza-xyz/agave/blob/master/program-runtime/src/invoke_context.rs): The Linchpin of Program Execution
 
 At the center of Solana's runtime lies the InvokeContext, a critical structure that encapsulates the execution environment for a single transaction. Let's break down its key aspects:
 
-### 3.1 Purpose and Responsibilities
+### 2.1 Purpose and Responsibilities
 
 The InvokeContext serves as the main pipeline from runtime to program execution. Its primary responsibilities include:
 
@@ -24,7 +20,7 @@ The InvokeContext serves as the main pipeline from runtime to program execution.
 - Providing access to system variables (sysvars) and the feature set
 - Ensuring proper security and privilege management during execution
 
-### 3.2 Structure and Key Components
+### 2.2 Structure and Key Components
 
 The InvokeContext is defined as a Rust struct with several important fields:
 
@@ -59,7 +55,7 @@ Let's examine these components in detail:
 
 7. **Syscall Context**: The `syscall_context` field manages the context for system calls, essential for interacting with the Solana runtime.
 
-### 3.3 Core Methods and Functionality
+### 2.3 Core Methods and Functionality
 
 The InvokeContext provides several key methods:
 
@@ -113,7 +109,7 @@ The InvokeContext provides several key methods:
    ```
    These methods handle compute unit consumption and retrieval of the compute budget.
 
-## 4. Interaction with Other Components
+## 3. Interaction with Other Components
 
 The InvokeContext doesn't operate in isolation. It interacts closely with several other components of the Solana runtime:
 
@@ -125,23 +121,23 @@ The InvokeContext doesn't operate in isolation. It interacts closely with severa
 
 4. **SysvarCache**: Used by InvokeContext for efficient access to system variables (sysvars).
 
-## 5. Security and Performance Considerations
+## 4. Security and Performance Considerations
 
 The InvokeContext plays a crucial role in maintaining the security and performance of the Solana blockchain:
 
-### 5.1 Security
+### 4.1 Security
 
 - Manages privileges during instruction execution
 - Ensures proper escalation/de-escalation of account permissions during CPIs
 - Validates account ownership and writability
 
-### 5.2 Performance
+### 4.2 Performance
 
 - Includes timing and tracing capabilities for performance analysis
 - Efficiently manages compute unit consumption
 - Utilizes caching mechanisms for program loading to optimize execution speed
 
-## 6. Cross-Program Invocation (CPI)
+## 5. Cross-Program Invocation (CPI)
 
 Cross-Program Invocation is a powerful feature of Solana, allowing programs to interact with each other. The InvokeContext is central to this process:
 
@@ -149,7 +145,7 @@ Cross-Program Invocation is a powerful feature of Solana, allowing programs to i
 2. This new context inherits certain properties from the parent context but maintains its own stack and compute budget.
 3. The InvokeContext manages the privilege escalation and de-escalation during these invocations, ensuring security is maintained.
 
-## 7. Testing and Mocking
+## 6. Testing and Mocking
 
 For testing purposes, the Solana codebase includes a macro for creating mock InvokeContext instances:
 
@@ -161,10 +157,12 @@ macro_rules! with_mock_invoke_context {
 
 This macro facilitates isolated testing of program behavior and cross-program invocations, allowing developers to simulate various execution scenarios without setting up a full runtime environment.
 
-## 8. Conclusion
+## 7. Conclusion
 
 The InvokeContext stands at the core of Solana's Program Runtime, orchestrating the execution of on-chain programs with efficiency and security. By managing resources, facilitating cross-program communication, and maintaining a secure execution environment, it enables Solana to achieve its high performance and scalability.
 
 For developers building on Solana, understanding the InvokeContext and its role in the Program Runtime is crucial. It allows for optimization of programs for performance and resource efficiency, working within the constraints of the runtime environment to create powerful and efficient decentralized applications.
 
 As Solana continues to evolve, the InvokeContext and the broader Program Runtime will likely see further optimizations and features(Program Runtime V2).
+---
+Note: Thank you instructors from [Solana Turbine](https://x.com/solanaturbine) -> [japarjam](https://x.com/japarjam), [Berg](https://x.com/bergabman), Nate, Dean, all the colleagues in the cohort and Joe from Anza! 

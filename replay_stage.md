@@ -4,7 +4,7 @@
 
 In the world of blockchain technology, maintaining consensus across a distributed network of validators is paramount. Solana, known for its high-performance blockchain, achieves this through a sophisticated system where the ReplayStage plays a pivotal role. This article delves into the intricacies of Solana's ReplayStage, exploring its functionality, implementation, and significance in maintaining the integrity and consistency of the Solana blockchain.
 
-## 2. Understanding the ReplayStage
+## 2. Understanding the [ReplayStage](https://github.com/anza-xyz/agave/blob/master/core/src/replay_stage.rs)
 
 ### 2.1 Definition and Purpose
 
@@ -163,3 +163,9 @@ These tests use mock objects and test fixtures to simulate different scenarios, 
 The ReplayStage stands as a cornerstone of Solana's high-performance blockchain architecture. By efficiently managing transaction replay, fork selection, and voting, it enables Solana to maintain consensus across its network of validators with remarkable speed and reliability.
 
 ReplayStage's sophisticated algorithms for fork choice, voting, and error recovery, combined with its optimized performance characteristics, contribute significantly to Solana's ability to process thousands of transactions per second while maintaining decentralized consensus.
+
+---
+Note: Thank you instructors from [Solana Turbine](https://x.com/solanaturbine) -> [japarjam](https://x.com/japarjam), [Berg](https://x.com/bergabman), Nate, Dean, all the colleagues in the cohort and Joe from Anza! 
+
+## References:
+- [Solana Consensus](https://www.youtube.com/watch?v=StDx4VhZIVk)
